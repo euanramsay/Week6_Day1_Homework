@@ -43,4 +43,12 @@ public class UberTest{
     assertEquals(true, uber.seatFull());
   }
 
+  @Test
+  public void seatShouldBeEmptyAfterDropOff(){
+    uber.pickup(passenger);
+    assertEquals(1, uber.peopleCount());
+    uber.dropOff();
+    assertEquals(0, uber.peopleCount());
+  }
+
 }

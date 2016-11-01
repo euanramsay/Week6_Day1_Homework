@@ -34,4 +34,10 @@ public boolean seatFull() {
   return peopleCount() == seat.length;
 }
 
+public void dropOff() {
+  for (int i = 0; i < seat.length; i++) {
+    seat[i] = null;
+  }
+}
+
 }
