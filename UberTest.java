@@ -7,7 +7,7 @@ public class UberTest{
 
   @Before 
   public void before() {
-    Uber = new Uber("John");
+    uber = new Uber("John");
     passenger = new Passenger();
   }
 
@@ -15,3 +15,4 @@ public class UberTest{
   public void hasName(){
     assertEquals( "John", uber.getName()); 
   }
+}

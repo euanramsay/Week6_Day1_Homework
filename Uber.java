@@ -4,7 +4,7 @@ public class Uber{
 
   public Uber(String name){
     this.name = name;
-    this.seat = new Passenger[5];
+    this.seat = new Passenger[4];
   }
   public String getName(){
     return this.name;
