@@ -15,4 +15,15 @@ public class UberTest{
   public void hasName(){
     assertEquals( "John", uber.getName()); 
   }
+
+  @Test
+  public void seatsStartEmpty() {
+    assertEquals(0, uber.peopleCount());
+  }
+
+  @Test
+  public void canPickupPassenger() {
+    uber.pickup(passenger);
+    assertEquals(1, uber.peopleCount());
+  }
 }
