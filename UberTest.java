@@ -26,4 +26,21 @@ public class UberTest{
     uber.pickup(passenger);
     assertEquals(1, uber.peopleCount());
   }
+
+  @Test
+  public void cantPickupWhenSeatIsFull(){
+    for (int i = 0; i < 4; i++){
+      uber.pickup(passenger);
+    }
+    assertEquals(4, uber.peopleCount());
+  }
+
+  @Test
+  public void seatIsFull(){
+    for (int i = 0; i < 5; i++) {
+      uber.pickup(passenger);
+    }
+    assertEquals(true, uber.seatFull());
+  }
+
 }
